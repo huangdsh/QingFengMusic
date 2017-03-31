@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.qingfeng.music">
+
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 访问SD卡 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.main.activity.MainActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.main.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.main.activity.GuideActivity">
+        </activity>
+
+        <service android:name=".service.ScanMusicService"/>
+        <service android:name=".service.PlayerService"/>
+        <service android:name=".service.DownloadSongService"/>
+        <service android:name=".service.DownloadLrcService"/>
+
+        <activity
+            android:name=".ui.player.activity.FullScreenPlayerActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".ui.billboard.activity.BillboardActivity">
+        </activity>
+    </application>
+
+</manifest>

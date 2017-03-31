@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    style="@style/local_main_card_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/internet_type_item_height">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
